@@ -1,4 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using System.Diagnostics;
+using System.Diagnostics.Contracts;
+
 class SayaTubeUser
 {
     private int id;
@@ -7,6 +10,7 @@ class SayaTubeUser
 
     public SayaTubeUser(string username)
     {
+        Debug.Assert(!string.IsNullOrEmpty(username) && username.Length <= 200, "Username memiliki panjang maksimal 100 karakter dan tidak berupa null.");
         this.username = username;
         uploadedVideos = new List<SayaTubeVideo>();
 
@@ -29,13 +33,14 @@ class SayaTubeUser
 
     public void AddVideo(SayaTubeVideo input)
     {
+        Contract.Requires(input != null);
         uploadedVideos.Add(input);
     }
 
     public void printAllVideoPlayCount()
     {
         Console.WriteLine("User :" + username);
-        for(int i = 0; i > uploadedVideos.Count; i++)
+        for(int i = 0; i > 7; i++)
         {
             Console.WriteLine("video" + i + 1 + "judul" + uploadedVideos[i].GetTitle() + "count" + uploadedVideos[i].GetPlayCount());
 
@@ -51,6 +56,7 @@ class SayaTubeVideo
 
     public SayaTubeVideo (string title)
     {
+        Debug.Assert(!string.IsNullOrEmpty(title) && title.Length <= 200, "Judul video memiliki panjang maksimal 200 karakter dan tidak berupa null.");
         this.title = title;
         Random rand = new Random();
         this.id = rand.Next(10000 ,99999);
@@ -58,7 +64,20 @@ class SayaTubeVideo
     }
     public void IncreasePlayCount(int playCount)
     {
-        this.playCount += playCount;
+        Debug.Assert(playCount > 0 && playCount <= 25000000, "Input penambahan play count maksimal 25.000.000 per panggilan method-nya");
+        try
+        {
+            checked
+            {
+                this.playCount += playCount;
+            }
+        }
+        catch (OverflowException)
+        {
+            Console.WriteLine("Plauy count melebihi batas maksimum.");
+        }
+            
+      
     }
 
     public void printVideoDetails()
@@ -95,5 +114,21 @@ class Program
         SayaTubeVideo video9 = new SayaTubeVideo("I");
         SayaTubeVideo video10 = new SayaTubeVideo("J");
 
+        user1.AddVideo(video1);
+        user1.AddVideo(video2);
+        user1.AddVideo(video3);
+        user1.AddVideo(video4);
+        user1.AddVideo(video5);
+        user1.AddVideo(video6);
+        user1.AddVideo(video7);
+        user1.AddVideo(video8);
+        user1.AddVideo(video9);
+        user1.AddVideo(video10);
+        user1.printAllVideoPlayCount();
+
+        for (int i = 0; i < 10; i++)
+        {
+            video1.IncreasePlayCount(1000000);
+        }
     }
 }
