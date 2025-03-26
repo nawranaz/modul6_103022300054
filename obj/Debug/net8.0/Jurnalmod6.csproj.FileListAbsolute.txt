@@ -1,0 +1,15 @@
+D:\Semester4\Konstruksi\tp\Jurnalmod6\bin\Debug\net8.0\Jurnalmod6.exe
+D:\Semester4\Konstruksi\tp\Jurnalmod6\bin\Debug\net8.0\Jurnalmod6.deps.json
+D:\Semester4\Konstruksi\tp\Jurnalmod6\bin\Debug\net8.0\Jurnalmod6.runtimeconfig.json
+D:\Semester4\Konstruksi\tp\Jurnalmod6\bin\Debug\net8.0\Jurnalmod6.dll
+D:\Semester4\Konstruksi\tp\Jurnalmod6\bin\Debug\net8.0\Jurnalmod6.pdb
+D:\Semester4\Konstruksi\tp\Jurnalmod6\obj\Debug\net8.0\Jurnalmod6.GeneratedMSBuildEditorConfig.editorconfig
+D:\Semester4\Konstruksi\tp\Jurnalmod6\obj\Debug\net8.0\Jurnalmod6.AssemblyInfoInputs.cache
+D:\Semester4\Konstruksi\tp\Jurnalmod6\obj\Debug\net8.0\Jurnalmod6.AssemblyInfo.cs
+D:\Semester4\Konstruksi\tp\Jurnalmod6\obj\Debug\net8.0\Jurnalmod6.csproj.CoreCompileInputs.cache
+D:\Semester4\Konstruksi\tp\Jurnalmod6\obj\Debug\net8.0\Jurnalmod6.sourcelink.json
+D:\Semester4\Konstruksi\tp\Jurnalmod6\obj\Debug\net8.0\Jurnalmod6.dll
+D:\Semester4\Konstruksi\tp\Jurnalmod6\obj\Debug\net8.0\refint\Jurnalmod6.dll
+D:\Semester4\Konstruksi\tp\Jurnalmod6\obj\Debug\net8.0\Jurnalmod6.pdb
+D:\Semester4\Konstruksi\tp\Jurnalmod6\obj\Debug\net8.0\Jurnalmod6.genruntimeconfig.cache
+D:\Semester4\Konstruksi\tp\Jurnalmod6\obj\Debug\net8.0\ref\Jurnalmod6.dll
